@@ -2,32 +2,16 @@ import React, { useState } from 'react';
 import AllCards from './AllCards.js';
 
 export default function FlashCardGame (props) {
-   const [questions, setQuestions] = useState(QUESTIONS)
-   if (props.view !== 'game') {
+
+   if (props.view !== 'flash-game') {
     return null
    } else {        
    return (
        <div>
-        <AllCards questions={questions}></AllCards>
+        <AllCards questions={props.questions}></AllCards>
         <button onClick={() => {props.setView('menu')}}>Menu</button>
        </div>
    )}
 }
 
-const QUESTIONS = [{
-    id: 1,
-    question: 'One',
-    answer: 'Uno',
-},
-{
-    id: 2,
-    question: 'Two',
-    answer: 'Dos',
-},
-{
-    id: 3,
-    question: 'Three',
-    answer: 'Tres',
-}
-]
 
