@@ -9,7 +9,7 @@ import TypeGame from './TypeGame.js';
 
 function App() {
   const [view, setView] = useState('menu')
-  const[continent, setContinent] = useState(EUROPE)
+  const [continent, setContinent] = useState(EUROPE)
 
   return (
     <div className="App">

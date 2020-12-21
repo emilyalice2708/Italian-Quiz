@@ -1,20 +1,24 @@
-import React, { Component } from 'react';
+import React, {  useState } from 'react';
 
-export class Menu extends Component {
-  render() {
-    if (this.props.view !== 'menu') {
-        return null
-    } else {
-    return (
+export default function Menu(props) {
+  const [pressed, setPressed] = useState('eur')
+  
+  if (props.view !== 'menu') {
+      return null
+  } else {
+  return (
+      <div>
         <div>
-            <button onClick={() => {this.props.setContinent(this.props.europe)}}>Europe</button>
-            <button onClick={() => {this.props.setContinent(this.props.oceania)}}>Oceania</button>
-            <button onClick={() => {this.props.setView('flash-game')}}>Flashcards</button>
-            <button onClick={() => {this.props.setView('type-game')}}>TypeGame</button>
+            <button className={pressed == 'eur' ? "pressed" : ""} onClick={() => {props.setContinent(props.europe); setPressed('eur')}}>Europe</button>
+            <button className={pressed == 'oce' ? "pressed" : ""} onClick={() => {props.setContinent(props.oceania); setPressed('oce')}}>Oceania</button>
         </div> 
-    )
-    }
+        <div>   
+            <button className="menu-button" onClick={() => {props.setView('flash-game')}}>Flashcards</button>
+            <button className="menu-button" onClick={() => {props.setView('type-game')}}>TypeGame</button>
+        </div> 
+      </div>
+  )
   }
+  
 }
 
-export default Menu;

@@ -20,6 +20,21 @@ body {
   }
 }
 
+button {
+  padding: 20px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.pressed {
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, .5);
+  background-color: grey;
+}
+
+.menu-button {
+  padding: 10px
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

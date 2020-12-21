@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import TypeQuestion from './TypeQuestion.js';
 
-export default function TypeGame (props) {
+export default function TypeGame(props) {
     const [index, setIndex] = useState(0)
     
     if (props.view !== 'type-game') {
