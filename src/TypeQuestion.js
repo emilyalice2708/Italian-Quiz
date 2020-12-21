@@ -29,10 +29,12 @@ export default function TypeQuestion({ card }) {
             </div>
             <form>
             <input type='text' value={inputText} onChange={handleChange}></input>
-            <button onClick={checkAnswer}>Check Answer</button>
+            <br/>
+            <button className="form-button" onClick={checkAnswer}>Submit</button>
              </form>
              {result}
-            <button onClick={() => {setVisibility(!visibility)}}>Show Answer</button>
+            <br/>
+            <button className="form-button" onClick={() => {setVisibility(!visibility)}}>Remind me!</button>
         </div>
     )
 }

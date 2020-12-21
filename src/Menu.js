@@ -14,6 +14,7 @@ export default function Menu(props) {
         </div> 
         <div>   
             <button className="menu-button" onClick={() => {props.setView('flash-game')}}>Flashcards</button>
+            <button className="menu-button" onClick={() => {props.setView('multiple-choice-game')}}>Multiple Choice Game</button>
             <button className="menu-button" onClick={() => {props.setView('type-game')}}>TypeGame</button>
         </div> 
       </div>

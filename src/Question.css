@@ -1,3 +1,7 @@
 .hidden {
     visibility: hidden;
 }
+
+.form-button {
+    padding: 5px;
+}
