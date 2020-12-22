@@ -22,17 +22,21 @@ export default function TypeQuestion({ card }) {
     return (
         <div>
             <div className="type-question">
-                {card.question}
+                Type the capital of {card.question}
             </div>
             <div className={`type-answer ${visibility ? 'visible' : 'hidden'}`}>
+                <div style={{backgroundColor: 'white', width: '50%', position: 'relative', left: 40, justifyContent: 'center', alignItems: 'center'}}>
                 {card.answer}
+                </div>
             </div>
             <form>
             <input type='text' value={inputText} onChange={handleChange}></input>
             <br/>
             <button className="form-button" onClick={checkAnswer}>Submit</button>
              </form>
-             {result}
+             <div style={{backgroundColor: 'white', width: '50%', position: 'relative', left: 40, justifyContent: 'center', alignItems: 'center'}}>
+                {result}
+             </div>
             <br/>
             <button className="form-button" onClick={() => {setVisibility(!visibility)}}>Remind me!</button>
         </div>

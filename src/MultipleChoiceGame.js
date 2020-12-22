@@ -42,12 +42,15 @@ export default function MultipleChoiceGame(props) {
     } else {        
     return (
         <div>
-            <div>{Question.question}</div>
+            <div>What is the capital of {Question.question}?</div>
             <button onClick={() => {checkAnswer(Choices[0].answer)}}>{Choices[0].answer}</button>
             <button onClick={() => {checkAnswer(Choices[1].answer)}}>{Choices[1].answer}</button>
             <button onClick={() => {checkAnswer(Choices[2].answer)}}>{Choices[2].answer}</button>
             <button onClick={() => {props.setView('menu')}}>Menu</button>
+            <br/>
+            <div style={{backgroundColor: 'white', width: '20%', position: 'relative', left: 150, justifyContent: 'center', alignItems: 'center'}}>
             {result}
+            </div>
         </div>
     )}
 }
