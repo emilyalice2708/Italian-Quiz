@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Question.css'
 
-export default function TypeQuestion({ card }) {
+export default function TypeQuestion({ card, setIndex, index }) {
     const [visibility, setVisibility] = useState(false)
     const [inputText, setInputText] = useState("")
     const [result, setResult] = useState("")
@@ -13,7 +13,7 @@ export default function TypeQuestion({ card }) {
     const checkAnswer = (e) => {
         e.preventDefault()
         if(card.answer.toLowerCase() === inputText.toLowerCase()) {
-            setResult("Correct!")
+            setIndex(index + 1)
         } else {
             setResult("Try again!")
         }
@@ -25,7 +25,7 @@ export default function TypeQuestion({ card }) {
                 Type the capital of {card.question}
             </div>
             <div className={`type-answer ${visibility ? 'visible' : 'hidden'}`}>
-                <div style={{backgroundColor: 'white', width: '50%', position: 'relative', left: 40, justifyContent: 'center', alignItems: 'center'}}>
+                <div style={{width: '50%', position: 'relative', left: 60, justifyContent: 'center', alignItems: 'center'}}>
                 {card.answer}
                 </div>
             </div>
@@ -34,7 +34,7 @@ export default function TypeQuestion({ card }) {
             <br/>
             <button className="form-button" onClick={checkAnswer}>Submit</button>
              </form>
-             <div style={{backgroundColor: 'white', width: '50%', position: 'relative', left: 40, justifyContent: 'center', alignItems: 'center'}}>
+             <div style={{width: '50%', position: 'relative', left: 60, justifyContent: 'center', alignItems: 'center'}}>
                 {result}
              </div>
             <br/>

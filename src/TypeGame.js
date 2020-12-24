@@ -9,9 +9,8 @@ export default function TypeGame(props) {
     } else {        
     return (
         <div>
-            <TypeQuestion card={props.questions[index]} key={props.questions[index].id}/> 
+            <TypeQuestion setIndex={setIndex} index={index} card={props.questions[index]} key={props.questions[index].id}/> 
             <button onClick={() => {setIndex((index + 1) % props.questions.length)}}>Pass</button>
-            <button onClick={() => {props.setView('menu')}}>Menu</button>
         </div>
     )}
 }
