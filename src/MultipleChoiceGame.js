@@ -46,9 +46,8 @@ export default function MultipleChoiceGame(props) {
             <button onClick={() => {checkAnswer(Choices[0].answer)}}>{Choices[0].answer}</button>
             <button onClick={() => {checkAnswer(Choices[1].answer)}}>{Choices[1].answer}</button>
             <button onClick={() => {checkAnswer(Choices[2].answer)}}>{Choices[2].answer}</button>
-            <button onClick={() => {props.setView('menu')}}>Menu</button>
             <br/>
-            <div style={{backgroundColor: 'white', width: '20%', position: 'relative', left: 150, justifyContent: 'center', alignItems: 'center'}}>
+            <div style={{width: '40%', position: 'absolute', left: 270}}>
             {result}
             </div>
         </div>

@@ -7,9 +7,8 @@ export default function FlashCardGame (props) {
     return null
    } else {        
    return (
-       <div>
+       <div style={{color: 'black'}}>
         <AllCards questions={props.questions}></AllCards>
-        <button onClick={() => {props.setView('menu')}}>Menu</button>
        </div>
    )}
 }
