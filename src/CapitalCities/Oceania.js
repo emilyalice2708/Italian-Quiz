@@ -33,6 +33,31 @@ const OCEANIA = [{
     id: 7,
     question: 'New Zealand',
     answer: 'Wellington',
+  },
+  {
+    id: 8,
+    question: 'Palau',
+    answer: 'Ngerulmud',
+  },
+  {
+    id: 9,
+    question: 'Samoa',
+    answer: 'Apia',
+  },
+  {
+    id: 10,
+    question: 'Tonga',
+    answer: "Nuku'alofa",
+  },
+  {
+    id: 11,
+    question: 'Tuvalu',
+    answer: 'Funafuti',
+  },
+  {
+    id: 12,
+    question: 'Vanuatu',
+    answer: 'Port Vila',
   }
   ]
 
