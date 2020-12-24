@@ -25,7 +25,7 @@ export default function TypeQuestion({ card, setIndex, index }) {
                 Type the capital of {card.question}
             </div>
             <div className={`type-answer ${visibility ? 'visible' : 'hidden'}`}>
-                <div style={{width: '50%', position: 'relative', left: 60, justifyContent: 'center', alignItems: 'center'}}>
+                <div>
                 {card.answer}
                 </div>
             </div>
@@ -34,7 +34,7 @@ export default function TypeQuestion({ card, setIndex, index }) {
             <br/>
             <button className="form-button" onClick={checkAnswer}>Submit</button>
              </form>
-             <div style={{width: '50%', position: 'relative', left: 60, justifyContent: 'center', alignItems: 'center'}}>
+             <div>
                 {result}
              </div>
             <br/>
